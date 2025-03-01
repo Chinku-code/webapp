@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage("Checkout") {
             steps {
-                git 'https://github.com/nishankainfo/webapp.git'
+                git 'https://github.com/Chinku-code/webapp.git'
             }
         }
 
