@@ -36,9 +36,9 @@ pipeline {
             steps {
                 sshagent(['tomcat-creds']) {
                     sh """
-                        scp -o StrictHostKeyChecking=no target/myweb.war ec2-user@15.206.178.27:/home/ec2-user/tomcat10/webapps/
-                        ssh -o StrictHostKeyChecking=no ec2-user@15.206.178.27 "bash /home/ec2-user/tomcat10/bin/shutdown.sh"
-                        ssh -o StrictHostKeyChecking=no ec2-user@15.206.178.27 "bash /home/ec2-user/tomcat10/bin/startup.sh"
+                        scp -o StrictHostKeyChecking=no target/myweb.war ec2-user@15.206.178.27:/home/ec2-user/tomcat-10/webapps/
+                        ssh -o StrictHostKeyChecking=no ec2-user@15.206.178.27 "bash /home/ec2-user/tomcat-10/bin/shutdown.sh"
+                        ssh -o StrictHostKeyChecking=no ec2-user@15.206.178.27 "bash /home/ec2-user/tomcat-10/bin/startup.sh"
                     """
                 }
             }
